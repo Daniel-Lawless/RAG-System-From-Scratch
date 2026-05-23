@@ -210,7 +210,7 @@ H_n
 So we can write the final result as:
 
 <p align="center">
-  <img src="../assets/coupon-collector-images/coupon-collector-final-result.png" alt="Coupon Collector final result" width="125">
+  <img src="https://raw.githubusercontent.com/Daniel-Lawless/Statistics-for-ai/main/assets/coupon-collector-images/coupon-collector-final-result.png" alt="Coupon collector final result" width="125">
 </p>
 
 
