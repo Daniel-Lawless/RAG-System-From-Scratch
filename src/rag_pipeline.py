@@ -5,6 +5,17 @@ from openai import OpenAI
 from pathlib import Path
 import logging
 
+logging.basicConfig(level=logging.DEBUG)
+
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("httpcore").setLevel(logging.WARNING)
+logging.getLogger("huggingface_hub").setLevel(logging.WARNING)
+logging.getLogger("sentence_transformers").setLevel(logging.WARNING)
+logging.getLogger("openai").setLevel(logging.WARNING)
+logging.getLogger("openai._base_client").setLevel(logging.WARNING)
+
+logger = logging.getLogger(__name__)
+
 class RAGPipeline():
 
     # Initialise our vector db, our chunker, and our embedder.
@@ -37,23 +48,33 @@ class RAGPipeline():
         # Retrieve num_retrieve most similar chunks. 
         most_similar = self.vector_db.search(query_embedding, num_retrieve)
 
+        # For debugging
+        for similarity, record in most_similar:
+            logger.debug(
+                # f-string: build message first, then maybe discard it
+                # logging placeholders: check log level first, only build message if needed
+                "similarity=%.4f | Retrieved chunk=%s | source_file=%s | chunk_index=%s",
+                similarity,
+                record["chunk"],
+                record["metadata"]["source_file"],
+                record["metadata"]["chunk_index"]
+            )
+
         retrieved_texts = []
 
-        # Just return the chunk text, not the similarity
+        # Return the source_fle, chunk_index, and chunk.
         for _, record in most_similar:
             source_file = record["metadata"]["source_file"]
             chunk_index = record["metadata"]["chunk_index"]
             chunk = record["chunk"]
-
-            # To help with debugging:
-            print()
 
             retrieved_texts.append(
                 f"[Source file: {source_file}, chunk index: {chunk_index}]\n"
                 f"{chunk}"
             )
 
-        # Combined most similar chunks acts as model context.
+
+        # Model context is a combination of the chunk text and important meta data which can be used by the model to reference where the information came from
         context = "\n\n --- \n\n".join(retrieved_texts)
 
         # Construct user query
@@ -98,12 +119,12 @@ if __name__ == "__main__":
 
     # For each file in this directory, read its contents and index it. This populates our database.
     for file in sorted(data_dir.glob("*.md")):
-        print(f"Indexing {file.name}...")
+        logger.info(f"Indexing {file.name}...")
         text = file.read_text(encoding = "utf-8")
         rag_pipeline.index_text(text, source_file = file.name)
 
     # Once the DB is populated, return the models response.
-    answer = rag_pipeline.response("What is the final probability for Buffons needle?", 10)
+    answer = rag_pipeline.response("What is the final probability for Buffons needle?", 4)
     print(answer)
 
 
