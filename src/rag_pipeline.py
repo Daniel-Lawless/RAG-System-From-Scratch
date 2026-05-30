@@ -5,7 +5,7 @@ from openai import OpenAI
 from pathlib import Path
 import logging
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("httpcore").setLevel(logging.WARNING)
@@ -126,8 +126,3 @@ if __name__ == "__main__":
     # Once the DB is populated, return the models response.
     answer = rag_pipeline.response("What is the final probability for Buffons needle?", 4)
     print(answer)
-
-
-
-
-

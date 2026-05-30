@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 class Embeddings:
 
     def __init__(self):
-
+        
         # Model to embed strings.
         self.model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
