@@ -81,3 +81,33 @@ Key lesson:
 - Fixed-size word chunking is simple, but it can split important explanations, equations, or definitions at awkward points, causing the model to miss important context.
 - Recursive chunking keeps related content together where possible by preferring paragraph and sentence boundaries before falling back to word-based splitting.
 - Overlap helps preserve context between neighbouring chunks, especially when an explanation continues across a chunk boundary.
+
+## Day 4 — Vectorized search with NumPy matrix multiplication
+
+Implemented:
+
+  * Replaced the previous heap-based search loop with vectorized NumPy search
+  * Stored embeddings separately from records so they can be stacked into a matrix
+  * Added an `embeddings_matrix` with shape:
+
+    ```text
+    (number_of_chunks, embedding_dimension)
+    ```
+
+  * Added a `_matrix_needs_rebuild` flag so the embeddings matrix is only rebuilt after new records are added
+  * Used `np.vstack()` to stack all chunk embeddings into a single 2D matrix
+  * Updated search to calculate all query-to-chunk similarities at once using matrix multiplication:
+
+    ```python
+    similarities = self.embeddings_matrix @ query
+    ```
+
+  * Used `np.argpartition()` to efficiently find the top-k most similar chunks without fully sorting every similarity score
+  * Sorted only the selected top-k results before returning them from most similar to least similar
+
+Key lesson:
+
+  * By stacking all chunk embeddings into a matrix, retrieval can be written as one matrix-vector multiplication instead of a Python loop over every record. This makes the search
+    implementation closer to how real vector databases for ML systems operate, by performing many vector comparisons together.
+  * `np.argpartition()` is useful for top-k retrieval because it avoids fully sorting every similarity score when only the best few are needed.
+  * Also, keeping the records and embeddings seperate makes the design cleaner and easier to debug. 
