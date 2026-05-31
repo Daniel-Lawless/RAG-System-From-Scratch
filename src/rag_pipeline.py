@@ -5,7 +5,7 @@ from openai import OpenAI
 from pathlib import Path
 import logging
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("httpcore").setLevel(logging.WARNING)
@@ -42,6 +42,9 @@ class RAGPipeline():
     # Models response
     def response(self, query: str, num_retrieve: int) -> str:
 
+        # For debugging
+        logger.debug("User passed query: %s", query)
+
         # Embed the query
         query_embedding = self.embedder.embed(query)
 
@@ -55,7 +58,7 @@ class RAGPipeline():
                 # logging placeholders: check log level first, only build message if needed
                 "similarity=%.4f | Retrieved chunk=%s | source_file=%s | chunk_index=%s",
                 similarity,
-                record["chunk"],
+                record["chunk"][:10],
                 record["metadata"]["source_file"],
                 record["metadata"]["chunk_index"]
             )
@@ -115,7 +118,7 @@ if __name__ == "__main__":
     rag_pipeline = RAGPipeline(vector_db, chunker, embedder)
 
     # Specify the path to the directory that contains the data we want to store in our vector DB.
-    data_dir = Path("../data")
+    data_dir = Path("data")
 
     # For each file in this directory, read its contents and index it. This populates our database.
     for file in sorted(data_dir.glob("*.md")):
@@ -124,5 +127,5 @@ if __name__ == "__main__":
         rag_pipeline.index_text(text, source_file = file.name)
 
     # Once the DB is populated, return the models response.
-    answer = rag_pipeline.response("What is the final probability for Buffons needle?", 4)
+    answer = rag_pipeline.response("What is the German Tank Problem?", 10)
     print(answer)
