@@ -2,7 +2,6 @@ from vector_db import VectorDB
 from chunking import Chunking
 from embeddings import Embeddings
 from openai import OpenAI
-from pathlib import Path
 import logging
 
 logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -46,8 +45,12 @@ class RAGPipeline():
         # Embed the query
         query_embedding = self.embedder.embed(query)
 
+        logger.info("Fetching most similar chunks...")
+
         # Retrieve num_retrieve most similar chunks. 
         most_similar = self.vector_db.search(query_embedding, num_retrieve)
+
+        logger.info("Most similar chunks fetched")
 
         # For debugging
         for similarity, record in most_similar:
@@ -104,48 +107,3 @@ class RAGPipeline():
 
         # Return the response from the LLM
         return response.output_text
-    
-if __name__ == "__main__":
-
-    # initialise vector database, chunker, and embedder
-    vector_db = VectorDB()
-    chunker = Chunking()
-    embedder = Embeddings()
-    
-    # pass them to our RAG pipeline
-    rag_pipeline = RAGPipeline(vector_db, chunker, embedder)
-
-    # Specify the path to the directory that contains the data we want to store in our vector DB.
-    data_dir = Path("data")
-
-    # Specify the path to the files that contain saved chunks and embeddings.
-    index_dir = Path("storage/index")
-    chunks_path = index_dir / "chunks.jsonl"
-    embeddings_path = index_dir / "embeddings.npy"
-
-    # If a previous saved state exists, load that state.
-    if (chunks_path.exists() 
-        and embeddings_path.exists()
-        # checks if the files are non-empty, i.e., if it has more than 0 bytes.
-        and chunks_path.stat().st_size > 0
-        and embeddings_path.stat().st_size > 0):
-
-        logger.info("Saved state exists. Loading previous state. ")
-        vector_db.load(index_dir) 
-
-    # Else create that state and save it for next time.
-    else:
-        logger.info("No previous state found. Creating new state:")
-        # For each file in this directory, read its contents and index it. This populates our database.
-        for file in sorted(data_dir.glob("*.md")):
-            logger.info(f"Indexing {file.name}...")
-            text = file.read_text(encoding = "utf-8") # Returns the entire file as a Python string
-            rag_pipeline.index_text(text, source_file = file.name)
-
-        # Save this state.
-        vector_db.save(index_dir)
-        logger.info("New state created.")
-
-    # Once the DB is populated, return the models response.
-    answer = rag_pipeline.response("What is the German Tank Problem?", 10)
-    print(answer)
