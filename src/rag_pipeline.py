@@ -5,8 +5,6 @@ from openai import OpenAI
 from pathlib import Path
 import logging
 
-logging.basicConfig(level=logging.INFO)
-
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("httpcore").setLevel(logging.WARNING)
 logging.getLogger("huggingface_hub").setLevel(logging.WARNING)
@@ -28,7 +26,7 @@ class RAGPipeline():
     def index_text(self, text: str, source_file: str) -> None:
 
         # Split data into chunks
-        chunks = self.chunker.chunk_text(text, chunk_size= 300, overlap=75)
+        chunks = self.chunker.chunk_text(text, chunk_size = 300, overlap=75)
 
         # Assign each chunk a chunk_id
         for chunk_index, chunk in enumerate(chunks):
