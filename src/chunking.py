@@ -1,3 +1,4 @@
+
 class Chunking:
 
     def chunk_text(self, text: str, chunk_size: int = 300, overlap: int = 75) -> list[str]:

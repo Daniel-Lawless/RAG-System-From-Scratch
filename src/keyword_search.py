@@ -67,12 +67,17 @@ class KeywordSearch:
             "π": " π pi ",
         }
 
+        # These are words that will very likely be matched.
+        STOPWORDS = {"the", "is", "a", "an", "what", "of", "to", "in", "and"}
+
         # Replace any key in text with its replacement.
         for key, value in replacements.items():
             text = text.replace(key, value)
         
         # This splits our text into a list of words without punctuation.
-        return re.findall(r"\b\w+\b", text)
+        return [token for token in 
+                re.findall(r"\b\w+\b", text)
+                if token not in STOPWORDS]
     
     # This function is what populates our search
     def _add_chunk(self, chunk: str, metadata: dict[str, Any]) -> None:
@@ -115,7 +120,7 @@ class KeywordSearch:
         self._preview(chunk)
         )
 
-        logger.info(
+        logger.debug(
             "Keyword index now contains %d chunks | avg_length=%.2f",
             self.number_of_documents,
             self.average_document_length,

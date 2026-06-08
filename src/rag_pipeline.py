@@ -1,7 +1,8 @@
-from vector_db import VectorDB
+from vector_search import VectorSearch
 from chunking import Chunking
 from embeddings import Embeddings
 from openai import OpenAI
+from typing import Any
 import logging
 
 logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -13,73 +14,42 @@ logging.getLogger("openai._base_client").setLevel(logging.WARNING)
 
 logger = logging.getLogger(__name__)
 
-class RAGPipeline():
+class RAGPipeline:
 
     # Initialise our vector db, our chunker, and our embedder.
-    def __init__(self, vector_db: VectorDB, chunker: Chunking, embedder: Embeddings):
-        self.vector_db = vector_db
-        self.chunker = chunker
-        self.embedder = embedder
-    
-    # Populates the vector database.
-    def index_text(self, text: str, source_file: str) -> None:
+    def __init__(self):
+        self.client = OpenAI()
 
-        # Split data into chunks
-        chunks = self.chunker.chunk_text(text, chunk_size = 300, overlap=75)
-
-        # Assign each chunk a chunk_id
-        for chunk_index, chunk in enumerate(chunks):
-            chunk_embedding = self.embedder.embed(chunk)
-            self.vector_db.add_record(chunk = chunk,
-                                      embedding = chunk_embedding,
-                                      source_file = source_file,
-                                      chunk_index = chunk_index
-                                      )
-
-    # Models response
-    def response(self, query: str, num_retrieve: int) -> str:
-
-        # For debugging
-        logger.debug("User passed query: %s", query)
-
-        # Embed the query
-        query_embedding = self.embedder.embed(query)
-
-        logger.info("Fetching most similar chunks...")
-
-        # Retrieve num_retrieve most similar chunks. 
-        most_similar = self.vector_db.search(query_embedding, num_retrieve)
-
-        logger.info("Most similar chunks fetched")
-
-        # For debugging
-        for similarity, record in most_similar:
-            logger.debug(
-                # f-string: build message first, then maybe discard it
-                # logging placeholders: check log level first, only build message if needed
-                "similarity=%.4f | Retrieved chunk=%s | source_file=%s | chunk_index=%s",
-                similarity,
-                record["chunk"][:10],
-                record["metadata"]["source_file"],
-                record["metadata"]["chunk_index"]
-            )
-
+    # Build the context for the model
+    def _build_context(self, results: list[dict[str, Any]]) -> str:
         retrieved_texts = []
 
-        # Return the source_fle, chunk_index, and chunk.
-        for _, record in most_similar:
-            source_file = record["metadata"]["source_file"]
-            chunk_index = record["metadata"]["chunk_index"]
+        for record in results:
             chunk = record["chunk"]
+            score = record["score"]
+            retriever = record["retriever"]
+            metadata = record["metadata"]
 
             retrieved_texts.append(
-                f"[Source file: {source_file}, chunk index: {chunk_index}]\n"
+                f"[Score: {score:.4f}, retriever: {retriever}, "
+                f"source_file: {metadata['source_file']}, chunk_index: {metadata['chunk_index']}]\n"
                 f"{chunk}"
             )
 
+        return "\n\n---\n\n".join(retrieved_texts)
 
-        # Model context is a combination of the chunk text and important meta data which can be used by the model to reference where the information came from
-        context = "\n\n --- \n\n".join(retrieved_texts)
+    # Models response
+    def response(self, query: str, results: list[dict[str,Any]]) -> str:
+
+        if not results:
+            logger.warning("No results were passed to the RAG pipeline.")
+            return "I do not know."
+
+        # Take the results from the retrieval method and build the context from them.
+        context = self._build_context(results=results)
+
+        # For debugging
+        logger.debug("Context for model: %s", context)
 
         # Construct user query
         user_query = f"""
@@ -95,8 +65,7 @@ class RAGPipeline():
         """
 
         # Generate the response from the LLM
-        client = OpenAI()
-        response = client.responses.create(
+        response = self.client.responses.create(
             model = "gpt-5.4-nano",
             instructions = (
                     "You're a helpful assistant. Answer only using the provided context. "
