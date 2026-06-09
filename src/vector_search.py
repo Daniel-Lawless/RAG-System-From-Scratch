@@ -61,6 +61,9 @@ class VectorSearch:
 
     # Returns the top k most similar records in our vector database to the user query.
     def search(self, query_embedding: np.ndarray, k: int) -> list[dict[str, Any]]:
+
+        logger.info("Starting vector search...")
+        
         logger.info("Fetching most similar chunks...")
 
         results = []
@@ -101,5 +104,7 @@ class VectorSearch:
             })
 
         logger.info("Most similar chunks fetched")
+
+        logger.info("Vector search complete")
 
         return results

@@ -9,6 +9,7 @@ from embeddings import Embeddings
 from rag_pipeline import RAGPipeline
 from keyword_search import KeywordSearch
 from index_manager import IndexManager
+from hybrid_search import HybridSearch
 
 logging.basicConfig(level=logging.INFO)
 
@@ -98,7 +99,14 @@ class RAGCLI:
         logger.info("Removed state at %s", self.index_path)
 
     # Command to ask a query
-    def ask(self, query: str, num_retrieved_chunks: int = 10, retrieval_method: str = "vector") -> None:
+    def ask(
+        self,
+        query: str,
+        num_retrieved_chunks: int = 10,
+        retrieval_method: str = "vector",
+        vector_weight: float = 1.0,
+        keyword_weight: float = 1.0
+    ) -> None:
 
         # Is not state exists, ask user to build one.
         if not self._index_exists():
@@ -106,8 +114,6 @@ class RAGCLI:
             return
         
         if retrieval_method == "vector":
-
-            logger.info("Starting vector search...")
 
             vector_search, embedder, index_manager = self._create_index_manager()
             rag_pipeline = self._create_rag_pipeline()
@@ -124,8 +130,6 @@ class RAGCLI:
                 k=num_retrieved_chunks
             )
 
-            logger.info("Vector search complete")
-
             # Pass those records into response to build context and retrieve the LLM response.
             answer = rag_pipeline.response(
                 query=query,
@@ -136,8 +140,6 @@ class RAGCLI:
             print(f"Model response: \n{answer}")
         
         elif retrieval_method == "keyword":
-
-            logger.info("Starting keyword search...")
 
             rag_pipeline = self._create_rag_pipeline()
 
@@ -150,8 +152,6 @@ class RAGCLI:
                 k=num_retrieved_chunks
             )
 
-            logger.info("Keyword search complete...")
-
             # Pass those records into response to build context and retrieve the LLM response.
             answer = rag_pipeline.response(
                 query=query,
@@ -162,7 +162,42 @@ class RAGCLI:
             print(f"Model response: \n{answer}")
 
         elif retrieval_method == "hybrid":
-            raise NotImplementedError("Hybrid not implemented yet.")
+
+            logger.info("Starting hybrid search...")
+
+            vector_search, embedder, index_manager = self._create_index_manager()
+            rag_pipeline = self._create_rag_pipeline()
+
+            # Load saved state for vector state
+            index_manager.load(self.index_path)
+
+            # Load saved state for keyword state
+            keyword_search = KeywordSearch.from_jsonl(self.index_path)
+
+            # Create hybrid object
+            hybrid_search = HybridSearch(
+                vector_search=vector_search,
+                keyword_search=keyword_search,
+                embedder=embedder,
+                vector_weight=vector_weight,
+                keyword_weight=keyword_weight
+            )
+
+            # Get the k records with the highest score.
+            results = hybrid_search.search(
+                query=query,
+                k=num_retrieved_chunks
+            )
+
+            logger.info("Hybrid search complete")
+
+            # Pass those records into response to build context and retrieve the LLM response.
+            answer = rag_pipeline.response(
+                query=query,
+                results=results
+            )
+
+            print(f"Model response: \n{answer}")
 
 # Build our CLI parser.
 def build_parser() -> argparse.ArgumentParser:
@@ -207,6 +242,20 @@ def build_parser() -> argparse.ArgumentParser:
         help="choose retrieval method"
     )
 
+    ask_parser.add_argument(
+        "--vector_weight",
+        type=float,
+        default=1,
+        help="Weight for vector search in hybrid retrieval"
+    )
+
+    ask_parser.add_argument(
+        "--keyword_weight",
+        type=float,
+        default=1,
+        help="Weight for keyword search in hybrid retrieval"
+    )
+
     # Add argument for the index parser. action = "store_true" means if we do not include --force, i.e., python src/cli.py index then args.force == False
     # If we do include it, python src/cli.py index --force, then args.force == True.
     index_parser.add_argument(
@@ -240,9 +289,10 @@ def main() -> None:
     elif args.command == "ask":
         cli.ask(query=args.query,
                 num_retrieved_chunks=args.k,
-                retrieval_method=args.retriever
+                retrieval_method=args.retriever,
+                vector_weight=args.vector_weight,
+                keyword_weight=args.keyword_weight
                 )
     
 if __name__ == "__main__":
     main()
-
