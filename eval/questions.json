@@ -1,0 +1,78 @@
+[
+    {
+    "question": "What is the German tank problem?",
+    "relevant_sources": ["05_german_tank_problem.md"]
+    },
+    {
+    "question": "What is the final estimator for Buffon's needle?",
+    "relevant_sources": ["04_buffons_needle.md"]
+    },
+    {
+    "question": "What are the learning outcomes from the coupon collector problem?",
+    "relevant_sources": ["06_coupon_collector_problem.md"]
+    },
+    {
+    "question": "After solving the lighthouse problem, what probability distribution describes the observed position on the shore?",
+    "relevant_sources": ["08_the_lighthouse_problem.md"]
+    },
+    {
+    "question": "What challenge in AI does the secretary problem demonstrate?",
+    "relevant_sources": ["07_secretary_problem.md"]
+    },
+    {
+    "question": "What special case makes the weighted mean converge to the ordinary mean?",
+    "relevant_sources": ["02_weighted_mean_derivation.md"]
+    },
+    {
+    "question": "What is the MLE for a Poisson distribution with different sized intervals?",
+    "relevant_sources": ["03_poisson_distribution_MLE_different_sized_intervals.md"]
+    },
+    {
+    "question": "What special case makes the MLE for a Poisson distribution with different sized intervals converge to the sample mean?",
+    "relevant_sources": ["03_poisson_distribution_MLE_different_sized_intervals.md"]
+    },
+    {
+    "question": "What is the final unbiased estimator for the German tank problem?",
+    "relevant_sources": ["05_german_tank_problem.md"]
+    },
+    {
+    "question": "What is the crossing condition in Buffon's needle?",
+    "relevant_sources": ["04_buffons_needle.md"]
+    },
+    {
+    "question": "What are the MLEs for the mean and variance of a normal distribution?",
+    "relevant_sources": ["01_mean_and_variance_derivation.md"]
+    },
+    {
+    "question": "Why does weighting observations by inverse variance make sense?",
+    "relevant_sources": ["02_weighted_mean_derivation.md"]
+    },
+    {
+    "question": "How do we estimate the total number of tanks from only the largest observed serial number?",
+    "relevant_sources": ["05_german_tank_problem.md"]
+    },
+    {
+    "question": "Why is the maximum likelihood estimate in the German tank problem biased?",
+    "relevant_sources": ["05_german_tank_problem.md"]
+    },
+    {
+    "question": "Why does the coupon collector problem involve harmonic numbers?",
+    "relevant_sources": ["06_coupon_collector_problem.md"]
+    },
+    {
+    "question": "What is the idea behind rejecting the first group of applicants in the secretary problem?",
+    "relevant_sources": ["07_secretary_problem.md"]
+    },
+    {
+    "question": "How does the lighthouse problem transform a random angle into a position on the shore?",
+    "relevant_sources": ["08_the_lighthouse_problem.md"]
+    },
+    {
+    "question": "Why does Buffon's needle let us estimate pi using random throws?",
+    "relevant_sources": ["04_buffons_needle.md"]
+    },
+    {
+    "question": "Why do different interval sizes change the Poisson maximum likelihood estimate?",
+    "relevant_sources": ["03_poisson_distribution_MLE_different_sized_intervals.md"]
+    }
+]
