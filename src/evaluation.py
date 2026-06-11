@@ -96,7 +96,7 @@ class RetrievalEvaluator:
         # If it didn't retrieve a single record that used the relevant file, it scores 0.
         return 0.0
     
-    # Answers how many of the top k retrieved chunks come from the correct source file.
+    # Answers how many of the top k retrieved chunks were from the correct source file.
     def _correct_source_count_at_k(
             self,
             results : list[dict[str, Any]],
@@ -164,6 +164,7 @@ class RetrievalEvaluator:
                 relevant_sources=relevant_sources
             )
 
+            # Calculate how many of the k results were from the correct source_file
             number_of_correct_hits = self._correct_source_count_at_k(
                 results=results,
                 relevant_sources=relevant_sources
@@ -204,9 +205,10 @@ class RetrievalEvaluator:
                     f"score = {result['score']:.4f}",
                     f"retriever = {result['retriever']}"
                 )
-            
+        
         number_of_questions = len(questions)
 
+        # Average the metrics
         mean_hit_at_k = total_hits / number_of_questions
         mean_correct_source_count_at_k = total_correct_hits / number_of_questions
         mean_precision_at_k = total_correct_hits / (self.k * number_of_questions)
@@ -219,7 +221,9 @@ class RetrievalEvaluator:
             f"mrr@{self.k}": mean_reciprocal_rank,
         }
 
+    # Run the evaluator for each retriever.
     def run(self) -> None:
+        # Load the questions from eval/questions.json
         questions = self._load_questions()
 
         retrievers = ["vector", "keyword", "hybrid"]
