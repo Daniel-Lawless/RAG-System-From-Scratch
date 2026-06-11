@@ -7,7 +7,6 @@ from keyword_search import KeywordSearch
 from hybrid_search import HybridSearch
 from chunking import Chunking
 from embeddings import Embeddings
-from index_manager import IndexManager
 
 
 class RetrievalEvaluator:
@@ -24,18 +23,11 @@ class RetrievalEvaluator:
         self.k = k
 
         # Load these once, then reuse them for every question.
-        self.vector_search = VectorSearch()
         self.embedder = Embeddings()
         self.chunker = Chunking()
 
-        self.index_manager = IndexManager(
-            vector_search=self.vector_search,
-            embedder=self.embedder,
-            chunker=self.chunker
-        )
-
         # Populate vector_search
-        self.index_manager.load(self.index_path)
+        self.vector_search = VectorSearch.from_index(self.index_path)
 
         # Populate keyword search
         self.keyword_search = KeywordSearch.from_jsonl(self.index_path)
@@ -156,7 +148,8 @@ class RetrievalEvaluator:
                 results = self._run_keyword_search(query=question)
             elif retriever_name == "hybrid":
                 results= self._run_hybrid_search(query=question)
-            else: raise ValueError("Unknown retriever.")
+            else: 
+                raise ValueError("Unknown retriever.")
 
             # Calculate hit per question
             hit = self._hit_at_k(
@@ -225,6 +218,9 @@ class RetrievalEvaluator:
     def run(self) -> None:
         # Load the questions from eval/questions.json
         questions = self._load_questions()
+
+        if not questions:
+            raise ValueError("No evaluation questions found.")
 
         retrievers = ["vector", "keyword", "hybrid"]
 

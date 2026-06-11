@@ -1,6 +1,8 @@
 import numpy as np
 import logging
+from pathlib import Path
 from typing import Any
+import json
 
 logger = logging.getLogger(__name__)
 
@@ -19,6 +21,53 @@ class VectorSearch:
 
         # Tracks whether we need to rebuild the matrix after adding new records.
         self._matrix_needs_rebuild = True
+
+    @classmethod
+    def from_index(cls, index_path : Path = Path("storage/index")) -> "VectorSearch":
+        # Define object to be returned.
+        vector_search = cls()
+
+        # File paths
+        records_path = index_path / "records.jsonl"
+        embeddings_path = index_path / "embeddings.npy"
+
+        if not records_path.exists() or records_path.stat().st_size == 0:
+            raise FileNotFoundError(f"Path {records_path} does not exist or is empty")
+
+        if not embeddings_path.exists() or embeddings_path.stat().st_size == 0:
+            raise FileNotFoundError(f"Path {embeddings_path} does not exist or is empty")
+
+        logger.info("Loading records and embeddings...")
+
+        # Convert each json "dict" in records.jsonl to a Python dict and add it to our records.  
+        with records_path.open("r", encoding="utf-8") as file:
+            for line in file:
+                record = json.loads(line)
+                vector_search.records.append(record)
+        
+        # Load matrix from embeddings.npy
+        loaded_matrix = np.load(embeddings_path)
+
+        # If the file is empty
+        if (loaded_matrix.size == 0):
+            vector_search.embeddings_matrix = None
+            vector_search.embeddings = []
+        # else set matrix equal to the loaded matrix and populate embeddings.
+        else:
+            vector_search.embeddings_matrix = loaded_matrix
+            vector_search.embeddings = [row for row in vector_search.embeddings_matrix]
+        
+        if len(vector_search.records) != len(vector_search.embeddings):
+            raise ValueError(
+                "Number of records does not match number of embeddings"
+            )
+
+        # Matrix is already loaded, so no need to rebuild
+        vector_search._matrix_needs_rebuild = False
+
+        logger.info("Records and embeddings loaded.")
+
+        return vector_search
 
     # Adds a record to the vector database
     def add_record(self, chunk: str, embedding: np.ndarray, source_file: str, chunk_index: int) -> None:

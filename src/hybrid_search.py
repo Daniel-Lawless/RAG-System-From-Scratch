@@ -146,7 +146,7 @@ class HybridSearch:
 
         for result in results:
             # If record is retrieved from both vector search and keyword search, 
-            # the rder is guranteed to be "vector", then "keyword" so no need to sort for 
+            # the order is guranteed to be "vector", then "keyword" so no need to sort for 
             # consistent output.
             retrievers = result["retriever_information"].keys()
             result["retriever"] = "hybrid(" + "+".join(retrievers) + ")"

@@ -218,6 +218,8 @@ class KeywordSearch:
 
     def search(self, query: str, k: int = 4) -> list[dict[str, Any]]:
 
+        logger.info("Starting hybrid search...")
+
         if k <= 0:
             logger.warning("invalid k value. k must be > 0")
             return []

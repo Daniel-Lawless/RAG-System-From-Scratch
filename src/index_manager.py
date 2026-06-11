@@ -2,109 +2,118 @@ from pathlib import Path
 import json
 import logging
 import numpy as np
+from typing import Any
 
-from vector_search import VectorSearch
 from embeddings import Embeddings
 from chunking import Chunking
 
 logger = logging.getLogger(__name__)
 
+
 class IndexManager:
 
-    def __init__(self,
-                vector_search:VectorSearch,
-                embedder : Embeddings,
-                chunker : Chunking
-                ):
+    def __init__(
+            self,
+            embedder: Embeddings,
+            chunker: Chunking,
+            chunk_size: int = 300,
+            overlap: int = 75,
+            ):
         
-        self.vector_search = vector_search
         self.embedder = embedder
         self.chunker = chunker
+        self.chunk_size = chunk_size
+        self.overlap = overlap
 
-    # Populates vector_search
-    def index_text(self, text: str, source_file: str) -> None:
+    def build_index_from_data(
+            self,
+            data_path: Path = Path("data"),
+            index_path: Path = Path("storage/index"),
+            ) -> None:
+        
+        records: list[dict[str, Any]] = []
+        embeddings: list[np.ndarray] = []
 
-        # Split data into chunks
-        chunks = self.chunker.chunk_text(text, chunk_size = 300, overlap=75)
+        # For each file
+        for file in sorted(data_path.glob("*.md")):
+            logger.info("Indexing %s ...", file.name)
 
-        # Assign each chunk a chunk_id
-        for chunk_index, chunk in enumerate(chunks):
-            chunk_embedding = self.embedder.embed(chunk)
-            self.vector_search.add_record(chunk = chunk,
-                                      embedding = chunk_embedding,
-                                      source_file = source_file,
-                                      chunk_index = chunk_index
-                                      )
+            # Get the content as a string
+            text = file.read_text(encoding="utf-8")
 
-    # Adds persistant storage
-    def save(self, path: Path) -> None:
+            # Get the chunks from this file
+            chunks = self.chunker.chunk_text(
+                text=text,
+                chunk_size=self.chunk_size,
+                overlap=self.overlap,
+            )
 
+            # for each chunk
+            for chunk_index, chunk in enumerate(chunks):
+                # Embed the chunk
+                embedding = self.embedder.embed(chunk)
+
+                # Create a record from this chunk
+                record = {
+                    "chunk": chunk,
+                    "metadata": {
+                        "source_file": file.name,
+                        "chunk_index": chunk_index,
+                    },
+                }
+
+                # Append the record and embedding.
+                records.append(record)
+                embeddings.append(embedding)
+
+        if not records:
+            raise ValueError(f"No markdown chunks were found in {data_path}")
+
+        # Once these records and embeddings are populated, save this state.
+        self._save_index(
+            records=records,
+            embeddings=embeddings,
+            index_path=index_path,
+        )
+
+    def _save_index(
+            self,
+            records: list[dict[str, Any]],
+            embeddings: list[np.ndarray],
+            index_path: Path,
+            ) -> None:
+        
         # Makes the directory represented by dir_path. 
         # parents=True means if any parent directories are missing, create those too.
         # So if neither folder exists: storage/index then Python creates storage/ then create storage/index/
         # exist_ok=True means if this directory already exists, then fine, don't crash.
-        path.mkdir(parents=True, exist_ok=True)
+        index_path.mkdir(parents=True, exist_ok=True)
 
         # Creates path objects to the records and embeddings files. 
         # Note, the / operator is special for Path objects. It joins paths and creates another path object.
-        records_path = path / "records.jsonl"
-        embeddings_path = path / "embeddings.npy"
+        records_path = index_path / "records.jsonl"
+        embeddings_path = index_path / "embeddings.npy"
 
         # Adds each chunk to the records.jsonl file. write mode overwrites the file if it is already made.
         with records_path.open("w", encoding="utf-8") as file:
-            for record in self.vector_search.records:
-                json_line = json.dumps(record) # Converts a Python dict into a json object.
+            for record in records:
+                json_line = json.dumps(record)
                 file.write(json_line + "\n")
-        
+
         # Save the embeddings as an embedding matrix.
         # turns our embedding list into a 2d matrix
-        self.vector_search._rebuild_embedding_matrix()
-
-        # If we do not have an embedding matrix, save an empty array.
-        if self.vector_search.embeddings_matrix is None:
-            np.save(embeddings_path, np.array([]))
-        # else save the embedding matrix.
+        if embeddings:
+            embeddings_matrix = np.vstack(embeddings)
         else:
-            np.save(embeddings_path, self.vector_search.embeddings_matrix)
+            # If we have no embeddings, just create a empty np array.
+            embeddings_matrix = np.array([])
 
-        logger.info("Records saved to %s | Embeddings saved to %s",
-                    records_path,
-                    embeddings_path
-                    )
-    
-    # Load state
-    def load(self, path: Path) -> None:
+        # Save out embedding matrix to embeddings_path
+        np.save(embeddings_path, embeddings_matrix)
 
-        # File paths
-        records_path = path / "records.jsonl"
-        embeddings_path = path / "embeddings.npy"
-
-        # Reset database
-        self.vector_search.records = []
-        self.vector_search.embeddings = []
-        self.vector_search.embeddings_matrix = None
-
-        logger.info("Loading records and embeddings...")
-
-        # Convert each json "dict" in records.jsonl to a Python dict and add it to our records.  
-        with records_path.open("r", encoding="utf-8") as file:
-            for line in file:
-                record = json.loads(line)
-                self.vector_search.records.append(record)
-        
-        # Load matrix from embeddings.npy
-        loaded_matrix = np.load(embeddings_path)
-
-        # If the file is empty
-        if (loaded_matrix.size == 0):
-            self.vector_search.embeddings_matrix = None
-            self.vector_search.embeddings = []
-        # else set matrix equal to the loaded matrix and populate embeddings.
-        else:
-            self.vector_search.embeddings_matrix = loaded_matrix
-            self.vector_search.embeddings = [row for row in self.vector_search.embeddings_matrix]
-
-        # Matrix is already loaded, so no need to rebuild
-        self.vector_search._matrix_needs_rebuild = False
-
-        logger.info("Records and embeddings loaded.")
+        logger.info(
+            "Index saved | records=%d | records_path=%s | embeddings_path=%s",
+            len(records),
+            records_path,
+            embeddings_path,
+        )

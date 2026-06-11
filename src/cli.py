@@ -21,82 +21,88 @@ class RAGCLI:
         self.index_path = Path(index_path)
         self.data_path = Path(data_path)
 
-    def _create_index_manager(self) -> tuple[VectorSearch, Embeddings, IndexManager]:
-        vector_search = VectorSearch()
+    def _create_index_manager(self) -> IndexManager:
         embedder = Embeddings()
         chunker = Chunking()
 
-        index_manager = IndexManager(vector_search=vector_search,
-                                     embedder=embedder,
-                                     chunker=chunker)
-
-        return (vector_search, embedder, index_manager)
+        return IndexManager(
+            embedder=embedder,
+            chunker=chunker,
+    )
     
     def _create_rag_pipeline(self) -> RAGPipeline:
         return RAGPipeline()
     
-    # Checks whether we have a saved state.
+    # Checks whether we have a saved index.
     def _index_exists(self) -> bool:
         records_path = self.index_path / "records.jsonl"
         embeddings_path = self.index_path / "embeddings.npy"
 
-        # Returns true if both files exist and they have more than 0 bytes, so we have a saved state.
-        return ((records_path.exists() and records_path.stat().st_size > 0) and
-                (embeddings_path.exists() and embeddings_path.stat().st_size > 0)
-                )
+        # Helper to check if a file exists and is not empty
+        def is_valid(path):
+            return path.is_file() and path.stat().st_size > 0
+
+        return is_valid(records_path) and is_valid(embeddings_path)
     
-    # Command to build state
-    def index(self, force: bool = False) -> None: 
-        
-        # If a state already exists and you're not forcing a rebuild, tell the user.
-        if self._index_exists() and not force:
-            logger.warning(
-                "Index already exists at %s. Use --force to rebuild.",
-                self.index_path
-            )
-            return
-        
-        # If we want to force a rebuild, delete the index directory and rebuild it.
-        if self._index_exists() and force:
-            # from "storage/index" this removes the index directory and everything below it, so record.jsonl and embeddings.npy
-            shutil.rmtree(self.index_path)
-            logger.info("State removed.")
-        
-        _, _, index_manager = self._create_index_manager()
+    # If no index exists, attempt to build it.
+    def _ensure_index_exists(self) -> bool:
+        if self._index_exists():
+            return True
 
-        logger.info("No previous state found. Creating new state:")
+        logger.info("No index found. Building index first...")
+        self.index(force=False)
 
-
-        for file in sorted(self.data_path.glob("*.md")):
-
-            logger.info(
-                "indexing %s ...",
-                file.name
-            )
-
-            text = file.read_text(encoding="utf-8")
-
-            index_manager.index_text(
-                text=text,
-                source_file=file.name
-            )
-            
-        # Save this state for next time.
-        index_manager.save(self.index_path)
-    
-    # Command to clear state.
-    def clear(self):
-        # If a state does not exist, we cannot delete it.
+        # Check the build succeeded
         if not self._index_exists():
             logger.warning(
-                "No state exists at %s",
+                "Index could not be created. Check that %s contains markdown files.",
+                self.data_path,
+            )
+            return False
+
+        return True
+    
+    # Command to build index
+    def index(self, force: bool = False) -> None: 
+        # If a user attempts to to build an index when one already exists,
+        # tell them how to force rebuild.
+        if self._index_exists():
+            if not force:
+                logger.warning(
+                    "Index already exists at %s. Use --force to rebuild.",
+                    self.index_path
+                )
+                return
+            
+            # If we reach here, an index exists and force is True,
+            # so delete the current saved index.
+            shutil.rmtree(self.index_path)
+            logger.info("Previous index removed.")
+        
+        # Build the new index
+        logger.info("Creating new index...")
+        index_manager = self._create_index_manager()
+
+        index_manager.build_index_from_data(
+            data_path=self.data_path, 
+            index_path=self.index_path
+        )
+
+        logger.info("New index created.")
+                    
+    # Command to clear index.
+    def clear(self):
+        # If a index does not exist, we cannot delete it.
+        if not self.index_path.exists():
+            logger.warning(
+                "No index exists at %s",
                 self.index_path
             )
             return
 
-        # If the state exists, remove it.
+        # If the index exists, remove it.
         shutil.rmtree(self.index_path)
-        logger.info("Removed state at %s", self.index_path)
+        logger.info("Removed index at %s", self.index_path)
 
     # Command to ask a query
     def ask(
@@ -108,73 +114,52 @@ class RAGCLI:
         keyword_weight: float = 1.0
     ) -> None:
 
-        # Is not state exists, ask user to build one.
-        if not self._index_exists():
-            logger.warning("No state exists. Run: python3 src/cli.py index")
+        # If no index exists, build the index.
+        if not self._ensure_index_exists():
             return
         
+        # Set up the pipeline and a placeholder for results
+        rag_pipeline = self._create_rag_pipeline()
+        results = []
+        
+        # Fetch the results using the requested retriever
         if retrieval_method == "vector":
 
-            vector_search, embedder, index_manager = self._create_index_manager()
-            rag_pipeline = self._create_rag_pipeline()
+            # Populate vector search.
+            vector_search = VectorSearch.from_index(self.index_path)
 
-            # Load saved state.
-            index_manager.load(self.index_path)
+            # Create embedder
+            embedder = Embeddings()
 
             # Embed the query
             query_embedding = embedder.embed(text=query)
-
-            # Return the k most similar records
+            
+            # Results from vector search
             results = vector_search.search(
                 query_embedding=query_embedding,
                 k=num_retrieved_chunks
             )
-
-            # Pass those records into response to build context and retrieve the LLM response.
-            answer = rag_pipeline.response(
-                query=query,
-                results=results
-            )
-
-            # Print model response to the terminal
-            print(f"Model response: \n{answer}")
-        
+            
         elif retrieval_method == "keyword":
 
-            rag_pipeline = self._create_rag_pipeline()
-
-            # Populate keyword search with saved state.
+            # Populate keyword search.
             keyword_search = KeywordSearch.from_jsonl(self.index_path) 
-
-            # Get the k records with the highest score.
+            
+            # Results from keyword search
             results = keyword_search.search(
                 query=query,
                 k=num_retrieved_chunks
             )
 
-            # Pass those records into response to build context and retrieve the LLM response.
-            answer = rag_pipeline.response(
-                query=query,
-                results=results,
-            )
-
-            # Print model response to the terminal
-            print(f"Model response: \n{answer}")
-
         elif retrieval_method == "hybrid":
 
-            logger.info("Starting hybrid search...")
-
-            vector_search, embedder, index_manager = self._create_index_manager()
-            rag_pipeline = self._create_rag_pipeline()
-
-            # Load saved state for vector state
-            index_manager.load(self.index_path)
-
-            # Load saved state for keyword state
+            # Populate vector and keyword search.
+            vector_search = VectorSearch.from_index(self.index_path)
             keyword_search = KeywordSearch.from_jsonl(self.index_path)
 
-            # Create hybrid object
+            # Create embedder
+            embedder = Embeddings()
+            
             hybrid_search = HybridSearch(
                 vector_search=vector_search,
                 keyword_search=keyword_search,
@@ -182,22 +167,23 @@ class RAGCLI:
                 vector_weight=vector_weight,
                 keyword_weight=keyword_weight
             )
-
-            # Get the k records with the highest score.
+            
+            # Results from hybrid search
             results = hybrid_search.search(
                 query=query,
                 k=num_retrieved_chunks
             )
 
-            logger.info("Hybrid search complete")
+        else:
+            raise ValueError(f"Unknown retrieval method: {retrieval_method}")
 
-            # Pass those records into response to build context and retrieve the LLM response.
-            answer = rag_pipeline.response(
-                query=query,
-                results=results
-            )
+        # Pass the fetched records to the LLM and print the models response
+        answer = rag_pipeline.response(
+            query=query,
+            results=results
+        )
 
-            print(f"Model response: \n{answer}")
+        print(f"Model response: \n{answer}")
 
 # Build our CLI parser.
 def build_parser() -> argparse.ArgumentParser:
