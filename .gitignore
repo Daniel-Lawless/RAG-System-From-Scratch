@@ -1,4 +1,5 @@
-venv/
+.venv/
 __pycache__/
 storage/index/
 .env
+.pytest_cache/
