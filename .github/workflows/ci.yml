@@ -1,26 +1,41 @@
+# This gives the workflow a name
 name: CI
 
+# the on section says when this workflow should run 
 on:
-  push:
-  pull_request:
+  push:           # Run this workflow when we push commits to GitHub
+  pull_request:   # Run this workflow when we open or update a pull request on GitHub
 
+# This sectiond efines the actual work GitHub should do
 jobs:
+  # Creates a job called test. This will display CI / test when ran
   test:
+    # This means GitHub should run the job on a fresh Ubuntu Linux machine.
     runs-on: ubuntu-latest
 
+    # These are the list of commands/actions the job should perform.
+    # They execute top to bottom.
     steps:
+      # Gives this step a name, and pulls our repo onto the fresh linux machine
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # Uses GitHubs setup python action and we tell it to instal python 3.12
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install Dependencies
+        # run means to execute shell commands  
+        # We upgrade pip first, then install requirements from our requirements.txt file
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # This runs our test suite using pytest.
+      # If any test fails, GitHub blocks the pull request.
+      # It will not blcok the push since it has already happended, it just
+      # marks the check as failed. 
       - name: Run Tests
         run: pytest
