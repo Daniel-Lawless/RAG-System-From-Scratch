@@ -1,0 +1,5300 @@
+{
+    "vector": [
+        {
+            "question": "What is the German tank problem?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.5117,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.4918,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.3632,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 0.322,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What is the final estimator for Buffon's needle?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.5457,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 0.4552,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.3872,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.3168,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What are the learning outcomes from the coupon collector problem?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.5942,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.566,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.5602,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.4315,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "After solving the lighthouse problem, what probability distribution describes the observed position on the shore?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.66,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.4875,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.4138,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 1,
+                    "score": 0.3395,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What challenge in AI does the secretary problem demonstrate?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.5701,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.3445,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.2672,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.2412,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What special case makes the weighted mean converge to the ordinary mean?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.4731,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.4574,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.2715,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.2646,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What is the MLE for a Poisson distribution with different sized intervals?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 0.728,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 0.5061,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 1,
+                    "score": 0.4552,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 0.3179,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What special case makes the MLE for a Poisson distribution with different sized intervals converge to the sample mean?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 0.7052,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 0.4723,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 1,
+                    "score": 0.4001,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.3968,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What is the final unbiased estimator for the German tank problem?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 0.5759,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.5548,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.5473,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.4255,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What is the crossing condition in Buffon's needle?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 0.6083,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.5722,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.4179,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.1714,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What are the MLEs for the mean and variance of a normal distribution?",
+            "relevant_sources": [
+                "01_mean_and_variance_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 0.5566,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.5477,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.5248,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.4807,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why does weighting observations by inverse variance make sense?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.4999,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.4922,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.2915,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 0.273,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "How do we estimate the total number of tanks from only the largest observed serial number?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.639,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.5937,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.5218,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.5071,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why is the maximum likelihood estimate in the German tank problem biased?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 0.6042,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.5598,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.5311,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.3888,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why does the coupon collector problem involve harmonic numbers?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.532,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.5086,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.4604,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.4118,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What is the idea behind rejecting the first group of applicants in the secretary problem?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.5984,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.4438,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.4197,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.2153,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "How does the lighthouse problem transform a random angle into a position on the shore?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.7246,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.4119,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.3871,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.3385,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why does Buffon's needle let us estimate pi using random throws?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.6091,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 0.5115,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.3781,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 6,
+                    "score": 0.2987,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why do different interval sizes change the Poisson maximum likelihood estimate?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 0.6409,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 0.5698,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 1,
+                    "score": 0.4132,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.3279,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Which estimator is based on the largest observed serial number, and why is it biased if used directly?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.5861,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.4959,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.4408,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.438,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "How can the gap between observed serial numbers be used to estimate the total population size?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.5362,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.5335,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.4734,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.4266,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why does adding the average missing gap to the maximum observed value reduce bias?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.5306,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.4677,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.4509,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 6,
+                    "score": 0.3987,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What is the intuition behind giving smaller variance measurements more influence in an average?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.4193,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.4158,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.3131,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.2855,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why do inverse variances appear as weights when combining multiple noisy measurements?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.5151,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.4265,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.3824,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 1,
+                    "score": 0.222,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What happens to the combined estimate when one observation has much lower uncertainty than the others?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.4124,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.3805,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.3536,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 1,
+                    "score": 0.3221,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Which problem estimates pi using random geometric intersections?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 0.5
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.4171,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 0.3978,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.3889,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.3839,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "How can repeated random needle drops be turned into an estimate of a mathematical constant?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.4318,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 0.4268,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.4101,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.345,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why does the probability of crossing a line depend on both the needle angle and its distance from the nearest line?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.6912,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 0.6597,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.584,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 2,
+                    "score": 0.3189,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Which derivation uses a change of variables to convert position uncertainty into a probability density?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 0.3333333333333333
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.3816,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.3681,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.3332,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.2967,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why does the lighthouse problem produce a heavy-tailed distribution rather than a normal-looking one?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.4631,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.4227,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 1,
+                    "score": 0.3036,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.2473,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "How does Bayes' rule allow the unknown source position to be estimated from observed flashes?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.5203,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.468,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 1,
+                    "score": 0.3203,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.3008,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What is the expected waiting time until all possible outcomes have been seen at least once?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.3964,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.3938,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.3679,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.344,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why does collecting the final unseen item take much longer on average than collecting the first few?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.3638,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.327,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.3265,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.3051,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "How can the total waiting time be decomposed into a sum of geometric waiting times?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.3638,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 0.3572,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.3357,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 1,
+                    "score": 0.3033,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Which strategy involves rejecting an initial sample and then accepting the first later option that beats everything seen so far?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.4654,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.4168,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.3762,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.2731,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why does the optimal stopping threshold end up being close to a fixed fraction of the total number of candidates?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.5129,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.4752,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.4548,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.3697,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What is the trade-off between learning from early candidates and leaving enough later candidates to choose from?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.4019,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.3621,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.3593,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.2132,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "How does the likelihood change when Poisson observations come from intervals of different sizes?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 0.6641,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 0.5263,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 1,
+                    "score": 0.4691,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.3065,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why is the rate estimate adjusted by the total exposure time rather than just the number of observations?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 0.5029,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 1,
+                    "score": 0.3838,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.2749,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.2522,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why is the sample mean the maximum likelihood estimate for the mean of a normal distribution?",
+            "relevant_sources": [
+                "01_mean_and_variance_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 1,
+                "precision": 0.25,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 0.5359,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.4943,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.4814,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 1,
+                    "score": 0.4497,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "What role does minimizing squared error play in estimating the mean of a Gaussian?",
+            "relevant_sources": [
+                "01_mean_and_variance_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 1,
+                "precision": 0.25,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.5236,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.5085,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.4609,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 1,
+                    "score": 0.4344,
+                    "retriever": "vector"
+                }
+            ]
+        },
+        {
+            "question": "Why does the maximum likelihood variance estimate divide by n rather than n minus one?",
+            "relevant_sources": [
+                "01_mean_and_variance_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 1,
+                "precision": 0.25,
+                "reciprocal_rank": 0.3333333333333333
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.5242,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 0.4888,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.4733,
+                    "retriever": "vector"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.4445,
+                    "retriever": "vector"
+                }
+            ]
+        }
+    ],
+    "keyword": [
+        {
+            "question": "What is the German tank problem?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 7.7762,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 7.6724,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 7.0044,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 6.0643,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What is the final estimator for Buffon's needle?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 13.8593,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 2,
+                    "score": 9.0934,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 9.0686,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 5.439,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What are the learning outcomes from the coupon collector problem?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 4,
+                    "score": 17.3401,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 0,
+                    "score": 11.5897,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 8.6491,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 4,
+                    "score": 4.5477,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "After solving the lighthouse problem, what probability distribution describes the observed position on the shore?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 18.2012,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 3,
+                    "score": 9.2658,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 1,
+                    "score": 7.717,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 6.9315,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What challenge in AI does the secretary problem demonstrate?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 4,
+                    "score": 12.3591,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 9.6632,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 5.5386,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 3.9781,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What special case makes the weighted mean converge to the ordinary mean?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 17.898,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 12.9258,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 1,
+                    "score": 8.6877,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 2,
+                    "score": 6.9911,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What is the MLE for a Poisson distribution with different sized intervals?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 20.1248,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 16.5805,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 2,
+                    "score": 5.0134,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 3.6871,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What special case makes the MLE for a Poisson distribution with different sized intervals converge to the sample mean?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 28.1792,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 20.1248,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 11.2709,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 2,
+                    "score": 10.0513,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What is the final unbiased estimator for the German tank problem?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 13.1534,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 10.3904,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 6,
+                    "score": 9.4228,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 8.749,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What is the crossing condition in Buffon's needle?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 2,
+                    "score": 18.2858,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 16.1271,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 11.7493,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 8.6874,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What are the MLEs for the mean and variance of a normal distribution?",
+            "relevant_sources": [
+                "01_mean_and_variance_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 10.7193,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 6.5138,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 5.9026,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 4.9935,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why does weighting observations by inverse variance make sense?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 7.2524,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 6.4291,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 1,
+                    "score": 6.162,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 5.6583,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "How do we estimate the total number of tanks from only the largest observed serial number?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 23.5089,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 1,
+                    "score": 17.0207,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 15.9209,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 14.2182,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why is the maximum likelihood estimate in the German tank problem biased?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 12.7713,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 11.0141,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 9.6006,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 6,
+                    "score": 8.3093,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why does the coupon collector problem involve harmonic numbers?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 10.157,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 0,
+                    "score": 9.8585,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 4,
+                    "score": 9.0702,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 5.0336,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What is the idea behind rejecting the first group of applicants in the secretary problem?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 13.4023,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 4,
+                    "score": 12.3591,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 5.5837,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 2,
+                    "score": 4.9968,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "How does the lighthouse problem transform a random angle into a position on the shore?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 1,
+                "precision": 0.25,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 22.2624,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 9.3165,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 7.2383,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 2,
+                    "score": 7.1411,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why does Buffon's needle let us estimate pi using random throws?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 19.6364,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 16.7407,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 2,
+                    "score": 12.5588,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 9.0863,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why do different interval sizes change the Poisson maximum likelihood estimate?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 13.6667,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 11.1189,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 5.0728,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 4.5345,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Which estimator is based on the largest observed serial number, and why is it biased if used directly?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 2,
+                    "score": 14.7409,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 13.494,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 1,
+                    "score": 13.2358,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 9.6672,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "How can the gap between observed serial numbers be used to estimate the total population size?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 21.7733,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 20.4908,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 19.5749,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 14.0588,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why does adding the average missing gap to the maximum observed value reduce bias?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 12.2583,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 9.9586,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 9.8248,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 6,
+                    "score": 9.4319,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What is the intuition behind giving smaller variance measurements more influence in an average?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 7.2436,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 6.7866,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 5.0387,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 4.5116,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why do inverse variances appear as weights when combining multiple noisy measurements?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 1,
+                "precision": 0.25,
+                "reciprocal_rank": 0.3333333333333333
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 4,
+                    "score": 5.8395,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 5.5127,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 5.3669,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 3.9289,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What happens to the combined estimate when one observation has much lower uncertainty than the others?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 1,
+                "precision": 0.25,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 9.4955,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 4,
+                    "score": 5.9545,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 5.7519,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 5.503,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Which problem estimates pi using random geometric intersections?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 0,
+                "number_of_correct_hits": 0,
+                "precision": 0.0,
+                "reciprocal_rank": 0.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 2,
+                    "score": 7.0726,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 3,
+                    "score": 6.0843,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 5.9283,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 4,
+                    "score": 5.7497,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "How can repeated random needle drops be turned into an estimate of a mathematical constant?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 11.4348,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 10.3403,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 2,
+                    "score": 8.5237,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 7.8505,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why does the probability of crossing a line depend on both the needle angle and its distance from the nearest line?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 29.8939,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 2,
+                    "score": 27.1341,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 19.9558,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 19.1201,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Which derivation uses a change of variables to convert position uncertainty into a probability density?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 0.5
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 8.1105,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 5.8419,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 5.6105,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 1,
+                    "score": 5.5617,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why does the lighthouse problem produce a heavy-tailed distribution rather than a normal-looking one?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 7.3534,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 1,
+                    "score": 7.1351,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 6.7596,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 5.5625,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "How does Bayes' rule allow the unknown source position to be estimated from observed flashes?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 19.5503,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 3,
+                    "score": 13.0208,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 9.8625,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 2,
+                    "score": 8.6403,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What is the expected waiting time until all possible outcomes have been seen at least once?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 4,
+                    "score": 16.8494,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 12.0278,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 10.8114,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 2,
+                    "score": 9.2728,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why does collecting the final unseen item take much longer on average than collecting the first few?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 13.9513,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 6,
+                    "score": 9.5726,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 7.7893,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 6.7606,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "How can the total waiting time be decomposed into a sum of geometric waiting times?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 4,
+                    "score": 21.6653,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 2,
+                    "score": 13.4356,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 0,
+                    "score": 8.3471,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 2,
+                    "score": 7.9776,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Which strategy involves rejecting an initial sample and then accepting the first later option that beats everything seen so far?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 4,
+                    "score": 15.3562,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 14.2628,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 13.9246,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 2,
+                    "score": 8.1974,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why does the optimal stopping threshold end up being close to a fixed fraction of the total number of candidates?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 4,
+                    "score": 12.8928,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 10.7324,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 8.4223,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 4,
+                    "score": 7.6094,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What is the trade-off between learning from early candidates and leaving enough later candidates to choose from?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 21.6104,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 4,
+                    "score": 7.9884,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 6.2965,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 6,
+                    "score": 5.293,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "How does the likelihood change when Poisson observations come from intervals of different sizes?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 14.4398,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 12.4409,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 0,
+                    "score": 7.6503,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 7.1822,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why is the rate estimate adjusted by the total exposure time rather than just the number of observations?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 11.5672,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 2,
+                    "score": 10.2864,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 9.3351,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 8.5391,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why is the sample mean the maximum likelihood estimate for the mean of a normal distribution?",
+            "relevant_sources": [
+                "01_mean_and_variance_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 1,
+                "precision": 0.25,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 13.6893,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 9.0944,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 1,
+                    "score": 8.2773,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 8.0352,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "What role does minimizing squared error play in estimating the mean of a Gaussian?",
+            "relevant_sources": [
+                "01_mean_and_variance_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 7.1551,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 5.4689,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 3.716,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 3.0494,
+                    "retriever": "keyword"
+                }
+            ]
+        },
+        {
+            "question": "Why does the maximum likelihood variance estimate divide by n rather than n minus one?",
+            "relevant_sources": [
+                "01_mean_and_variance_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 1,
+                "precision": 0.25,
+                "reciprocal_rank": 0.3333333333333333
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 9.418,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 9.1061,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 8.9485,
+                    "retriever": "keyword"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 2,
+                    "score": 8.4747,
+                    "retriever": "keyword"
+                }
+            ]
+        }
+    ],
+    "hybrid": [
+        {
+            "question": "What is the German tank problem?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0318,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What is the final estimator for Buffon's needle?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 2,
+                    "score": 0.0298,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What are the learning outcomes from the coupon collector problem?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0313,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 6,
+                    "score": 0.0303,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "After solving the lighthouse problem, what probability distribution describes the observed position on the shore?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0296,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.0295,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What challenge in AI does the secretary problem demonstrate?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 0.0306,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0304,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0299,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What special case makes the weighted mean converge to the ordinary mean?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 1,
+                    "score": 0.031,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 0.0308,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What is the MLE for a Poisson distribution with different sized intervals?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 2,
+                    "score": 0.031,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 0.031,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What special case makes the MLE for a Poisson distribution with different sized intervals converge to the sample mean?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 0.0303,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What is the final unbiased estimator for the German tank problem?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0313,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.0313,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.031,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What is the crossing condition in Buffon's needle?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.0318,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.0317,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 2,
+                    "score": 0.0313,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What are the MLEs for the mean and variance of a normal distribution?",
+            "relevant_sources": [
+                "01_mean_and_variance_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.0318,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why does weighting observations by inverse variance make sense?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0313,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 1,
+                    "score": 0.0296,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "How do we estimate the total number of tanks from only the largest observed serial number?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.0318,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.0306,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why is the maximum likelihood estimate in the German tank problem biased?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.0308,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why does the coupon collector problem involve harmonic numbers?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0311,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.031,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What is the idea behind rejecting the first group of applicants in the secretary problem?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.0302,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "How does the lighthouse problem transform a random angle into a position on the shore?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0311,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 2,
+                    "score": 0.031,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why does Buffon's needle let us estimate pi using random throws?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0303,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why do different interval sizes change the Poisson maximum likelihood estimate?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 1,
+                    "score": 0.0306,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0301,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Which estimator is based on the largest observed serial number, and why is it biased if used directly?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0312,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.031,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "How can the gap between observed serial numbers be used to estimate the total population size?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.0306,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why does adding the average missing gap to the maximum observed value reduce bias?",
+            "relevant_sources": [
+                "05_german_tank_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.0318,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 7,
+                    "score": 0.0318,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.0317,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What is the intuition behind giving smaller variance measurements more influence in an average?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 0.0311,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0304,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why do inverse variances appear as weights when combining multiple noisy measurements?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0313,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 1,
+                    "score": 0.031,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0296,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What happens to the combined estimate when one observation has much lower uncertainty than the others?",
+            "relevant_sources": [
+                "02_weighted_mean_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.0302,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 1,
+                    "score": 0.0299,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Which problem estimates pi using random geometric intersections?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 1,
+                "precision": 0.25,
+                "reciprocal_rank": 0.25
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.0313,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.0311,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.0308,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "How can repeated random needle drops be turned into an estimate of a mathematical constant?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.0313,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0312,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why does the probability of crossing a line depend on both the needle angle and its distance from the nearest line?",
+            "relevant_sources": [
+                "04_buffons_needle.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 1,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 0,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 2,
+                    "score": 0.0318,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "04_buffons_needle.md",
+                    "chunk_index": 3,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Which derivation uses a change of variables to convert position uncertainty into a probability density?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 0.3333333333333333
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0318,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.0306,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why does the lighthouse problem produce a heavy-tailed distribution rather than a normal-looking one?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 0.0299,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.0288,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "How does Bayes' rule allow the unknown source position to be estimated from observed flashes?",
+            "relevant_sources": [
+                "08_the_lighthouse_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.0318,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0313,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.031,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What is the expected waiting time until all possible outcomes have been seen at least once?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 0.5
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0318,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0313,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.0308,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.0308,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why does collecting the final unseen item take much longer on average than collecting the first few?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 6,
+                    "score": 0.0313,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0308,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 5,
+                    "score": 0.0306,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "How can the total waiting time be decomposed into a sum of geometric waiting times?",
+            "relevant_sources": [
+                "06_coupon_collector_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0308,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 2,
+                    "score": 0.0303,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Which strategy involves rejecting an initial sample and then accepting the first later option that beats everything seen so far?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 4,
+                "precision": 1.0,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.0305,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why does the optimal stopping threshold end up being close to a fixed fraction of the total number of candidates?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 2,
+                    "score": 0.0311,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.0303,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What is the trade-off between learning from early candidates and leaving enough later candidates to choose from?",
+            "relevant_sources": [
+                "07_secretary_problem.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 1,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "06_coupon_collector_problem.md",
+                    "chunk_index": 6,
+                    "score": 0.031,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "07_secretary_problem.md",
+                    "chunk_index": 4,
+                    "score": 0.0289,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "How does the likelihood change when Poisson observations come from intervals of different sizes?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.0303,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0296,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why is the rate estimate adjusted by the total exposure time rather than just the number of observations?",
+            "relevant_sources": [
+                "03_poisson_distribution_MLE_different_sized_intervals.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 3,
+                "precision": 0.75,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 3,
+                    "score": 0.032,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 0,
+                    "score": 0.0318,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 0,
+                    "score": 0.0317,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "03_poisson_distribution_MLE_different_sized_intervals.md",
+                    "chunk_index": 1,
+                    "score": 0.0304,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why is the sample mean the maximum likelihood estimate for the mean of a normal distribution?",
+            "relevant_sources": [
+                "01_mean_and_variance_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 0.0328,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.0323,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0305,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "What role does minimizing squared error play in estimating the mean of a Gaussian?",
+            "relevant_sources": [
+                "01_mean_and_variance_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 2,
+                "precision": 0.5,
+                "reciprocal_rank": 1.0
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0325,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 3,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.031,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "08_the_lighthouse_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.0301,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        },
+        {
+            "question": "Why does the maximum likelihood variance estimate divide by n rather than n minus one?",
+            "relevant_sources": [
+                "01_mean_and_variance_derivation.md"
+            ],
+            "metrics": {
+                "hit": 1,
+                "number_of_correct_hits": 1,
+                "precision": 0.25,
+                "reciprocal_rank": 0.5
+            },
+            "retrieved_sources": [
+                {
+                    "rank": 1,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0318,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 2,
+                    "source_file": "01_mean_and_variance_derivation.md",
+                    "chunk_index": 0,
+                    "score": 0.0317,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 3,
+                    "source_file": "02_weighted_mean_derivation.md",
+                    "chunk_index": 2,
+                    "score": 0.0315,
+                    "retriever": "hybrid(vector+keyword)"
+                },
+                {
+                    "rank": 4,
+                    "source_file": "05_german_tank_problem.md",
+                    "chunk_index": 3,
+                    "score": 0.0311,
+                    "retriever": "hybrid(vector+keyword)"
+                }
+            ]
+        }
+    ]
+}

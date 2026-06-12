@@ -1,20 +1,23 @@
 from pathlib import Path
 from typing import Any
-import json
-
 from vector_search import VectorSearch
 from keyword_search import KeywordSearch
 from hybrid_search import HybridSearch
 from chunking import Chunking
 from embeddings import Embeddings
+from logging_config import configure_logging
 
+import json
+import logging
+
+logger=logging.getLogger(__name__)
 
 class RetrievalEvaluator:
 
     def __init__(
             self,
             index_path: Path = Path("storage/index"),
-            eval_path: Path = Path("eval/questions.json"),
+            eval_path: Path = Path("eval"),
             k: int = 10
             ):
         
@@ -41,7 +44,8 @@ class RetrievalEvaluator:
     
     # Load evaluation questions
     def _load_questions(self) -> list[dict[str,Any]]:
-        with self.eval_path.open("r", encoding="utf-8") as file:
+        question_file = self.eval_path / "questions.json"
+        with question_file.open("r", encoding="utf-8") as file:
             return json.load(file)
 
     # Run and obtain results from vector search
@@ -119,7 +123,7 @@ class RetrievalEvaluator:
             # Extract source file from this record
             source_file = record["metadata"]["source_file"]
             
-            # If the source_file is in relevant_sources, the retriever got a hit, so add 1.
+            # If the source_file is in relevant_sources, the retriever got a hit, so return 1.
             if source_file in relevant_sources:
                 return 1
 
@@ -129,7 +133,9 @@ class RetrievalEvaluator:
             self,
             retriever_name : str,
             questions: list[dict[str, Any]],
-            ) -> dict[str, float]:
+            ) -> tuple[dict[str, float], list[dict[str, Any]]]:
+
+        list_of_results = []
         
         total_hits = 0
         total_correct_hits: int = 0
@@ -181,23 +187,37 @@ class RetrievalEvaluator:
             # Sum up each reciprocal rank to give total reciprocal rank
             total_reciprocal_rank += reciprocal_rank
 
-            print()
-            print(f"Question : {question}")
-            print(f"retriever : {retriever_name}")
-            print(f"hit@{self.k} : {hit}")
-            print(f"correct_source_count@{self.k} : {number_of_correct_hits}")
-            print(f"precision@{self.k} : {precision:.4f}")
-            print(f"RR@{self.k} : {reciprocal_rank:.4f}")
-            print("retrieved sources:")
+            retrieved_sources = []
 
+            # Calculate each chunks returned contents 
             for rank, result in enumerate(results, start=1):
                 metadata = result["metadata"]
-                print(
-                    f"{rank}. {metadata['source_file']}",
-                    f"chunk = {metadata['chunk_index']}",
-                    f"score = {result['score']:.4f}",
-                    f"retriever = {result['retriever']}"
-                )
+
+                record = {
+                    "rank" : rank,
+                    "source_file" : metadata["source_file"],
+                    "chunk_index" : metadata["chunk_index"],
+                    "score" : round(result["score"], 4),
+                    "retriever" : result["retriever"]
+                }
+
+                retrieved_sources.append(record)
+
+            # Combine this with the metrics for the whole question.
+            result_for_question = {
+                "question" : question,
+                "relevant_sources" : relevant_sources,
+                "metrics" : {
+                    "hit" : hit,
+                    "number_of_correct_hits" : number_of_correct_hits,
+                    "precision" : precision,
+                    "reciprocal_rank" : reciprocal_rank
+                },
+                "retrieved_sources" : retrieved_sources
+            }
+
+            # append to our list of combined results
+            list_of_results.append(result_for_question)        
         
         number_of_questions = len(questions)
 
@@ -207,15 +227,17 @@ class RetrievalEvaluator:
         mean_precision_at_k = total_correct_hits / (self.k * number_of_questions)
         mean_reciprocal_rank = total_reciprocal_rank / number_of_questions
 
-        return {
+        return ({
             f"hit@{self.k}": mean_hit_at_k,
-            f"correct_source_count@{self.k}": mean_correct_source_count_at_k,
+            f"mean_correct_source_count@{self.k}": mean_correct_source_count_at_k,
             f"precision@{self.k}": mean_precision_at_k,
             f"mrr@{self.k}": mean_reciprocal_rank,
-        }
+        }, list_of_results)
 
-    # Run the evaluator for each retriever.
     def run(self) -> None:
+
+        logger.info("Starting evaluation...")
+
         # Load the questions from eval/questions.json
         questions = self._load_questions()
 
@@ -224,26 +246,69 @@ class RetrievalEvaluator:
 
         retrievers = ["vector", "keyword", "hybrid"]
 
-        print()
-        print(f"running retrieval evaluation with k = {self.k} ")
-        print("=" * 60)
+        results = {} 
 
+        results_per_question_retriever = {}
+
+        # For each retriever
         for retriever in retrievers:
-            metrics = self._evaluate_retriever(
+
+            logger.info("Evaluating %s retriever", retriever)
+
+            # Extract overall metrics and per question metrics of the given retriever
+            metrics, per_question_metrics = self._evaluate_retriever(
                 retriever_name=retriever,
                 questions=questions
-                )
-            
-            print("=" * 60)
-            print(f"summary for retriever {retriever}:")
-            print(
-                f"hit@{self.k} : {metrics[f'hit@{self.k}']:.4f}\n"
-                f"correct_source_count@{self.k} : {metrics[f'correct_source_count@{self.k}']:.4f}\n"
-                f"precision@{self.k} : {metrics[f'precision@{self.k}']:.4f}\n"
-                f"mrr@{self.k} : {metrics[f'mrr@{self.k}']:.4f}"
             )
-            print("=" * 60)
+
+            # Populate results dictionary for overall results
+            results[retriever] = {
+                f"mean_hit@{self.k}": round(metrics[f"hit@{self.k}"], 4),
+                f"mean_correct_source_count@{self.k}": round(metrics[f"mean_correct_source_count@{self.k}"], 4),
+                f"mean_precision@{self.k}": round(metrics[f"precision@{self.k}"], 4),
+                f"mean_reciprocal_rank@{self.k}": round(metrics[f"mrr@{self.k}"], 4),
+            }
+
+            # Populate dictionary for per questions results
+            results_per_question_retriever[retriever] = per_question_metrics
+
+        # Define paths
+        results_path = self.eval_path / "results.json"
+        per_question_results_path = self.eval_path / "per_question_results.json"
+
+        # Write overall results to results.json
+        logger.info("Creating %s", results_path)
+        with results_path.open("w") as file:
+            json.dump(results, file, indent=4)
+        
+        # Write per question results to per_question_results.json
+        logger.info("Creating %s", per_question_results_path)
+        with per_question_results_path.open("w") as file:
+            json.dump(results_per_question_retriever, file, indent=4)
+
+        logger.info("Evaluation complete")
+
+def configure_logging() -> None:
+    logging.basicConfig(level=logging.INFO)
+
+    noisy_loggers = [
+        "vector_search",
+        "keyword_search",
+        "hybrid_search",
+        "sentence_transformers",
+        "httpx",
+        "httpcore",
+        "huggingface_hub",
+        "transformers",
+    ]
+
+    for logger_name in noisy_loggers:
+        logging.getLogger(logger_name).setLevel(logging.WARNING)
 
 if __name__ == "__main__":
+    configure_logging()
+
+    evaluator = RetrievalEvaluator(k=4)
+    evaluator.run()
     evaluator = RetrievalEvaluator(k=4)
     evaluator.run()

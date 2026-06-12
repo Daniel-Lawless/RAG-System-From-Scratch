@@ -1,78 +1,170 @@
 [
     {
-    "question": "What is the German tank problem?",
-    "relevant_sources": ["05_german_tank_problem.md"]
+        "question": "What is the German tank problem?",
+        "relevant_sources": ["05_german_tank_problem.md"]
     },
     {
-    "question": "What is the final estimator for Buffon's needle?",
-    "relevant_sources": ["04_buffons_needle.md"]
+        "question": "What is the final estimator for Buffon's needle?",
+        "relevant_sources": ["04_buffons_needle.md"]
     },
     {
-    "question": "What are the learning outcomes from the coupon collector problem?",
-    "relevant_sources": ["06_coupon_collector_problem.md"]
+        "question": "What are the learning outcomes from the coupon collector problem?",
+        "relevant_sources": ["06_coupon_collector_problem.md"]
     },
     {
-    "question": "After solving the lighthouse problem, what probability distribution describes the observed position on the shore?",
-    "relevant_sources": ["08_the_lighthouse_problem.md"]
+        "question": "After solving the lighthouse problem, what probability distribution describes the observed position on the shore?",
+        "relevant_sources": ["08_the_lighthouse_problem.md"]
     },
     {
-    "question": "What challenge in AI does the secretary problem demonstrate?",
-    "relevant_sources": ["07_secretary_problem.md"]
+        "question": "What challenge in AI does the secretary problem demonstrate?",
+        "relevant_sources": ["07_secretary_problem.md"]
     },
     {
-    "question": "What special case makes the weighted mean converge to the ordinary mean?",
-    "relevant_sources": ["02_weighted_mean_derivation.md"]
+        "question": "What special case makes the weighted mean converge to the ordinary mean?",
+        "relevant_sources": ["02_weighted_mean_derivation.md"]
     },
     {
-    "question": "What is the MLE for a Poisson distribution with different sized intervals?",
-    "relevant_sources": ["03_poisson_distribution_MLE_different_sized_intervals.md"]
+        "question": "What is the MLE for a Poisson distribution with different sized intervals?",
+        "relevant_sources": ["03_poisson_distribution_MLE_different_sized_intervals.md"]
     },
     {
-    "question": "What special case makes the MLE for a Poisson distribution with different sized intervals converge to the sample mean?",
-    "relevant_sources": ["03_poisson_distribution_MLE_different_sized_intervals.md"]
+        "question": "What special case makes the MLE for a Poisson distribution with different sized intervals converge to the sample mean?",
+        "relevant_sources": ["03_poisson_distribution_MLE_different_sized_intervals.md"]
     },
     {
-    "question": "What is the final unbiased estimator for the German tank problem?",
-    "relevant_sources": ["05_german_tank_problem.md"]
+        "question": "What is the final unbiased estimator for the German tank problem?",
+        "relevant_sources": ["05_german_tank_problem.md"]
     },
     {
-    "question": "What is the crossing condition in Buffon's needle?",
-    "relevant_sources": ["04_buffons_needle.md"]
+        "question": "What is the crossing condition in Buffon's needle?",
+        "relevant_sources": ["04_buffons_needle.md"]
     },
     {
-    "question": "What are the MLEs for the mean and variance of a normal distribution?",
-    "relevant_sources": ["01_mean_and_variance_derivation.md"]
+        "question": "What are the MLEs for the mean and variance of a normal distribution?",
+        "relevant_sources": ["01_mean_and_variance_derivation.md"]
     },
     {
-    "question": "Why does weighting observations by inverse variance make sense?",
-    "relevant_sources": ["02_weighted_mean_derivation.md"]
+        "question": "Why does weighting observations by inverse variance make sense?",
+        "relevant_sources": ["02_weighted_mean_derivation.md"]
     },
     {
-    "question": "How do we estimate the total number of tanks from only the largest observed serial number?",
-    "relevant_sources": ["05_german_tank_problem.md"]
+        "question": "How do we estimate the total number of tanks from only the largest observed serial number?",
+        "relevant_sources": ["05_german_tank_problem.md"]
     },
     {
-    "question": "Why is the maximum likelihood estimate in the German tank problem biased?",
-    "relevant_sources": ["05_german_tank_problem.md"]
+        "question": "Why is the maximum likelihood estimate in the German tank problem biased?",
+        "relevant_sources": ["05_german_tank_problem.md"]
     },
     {
-    "question": "Why does the coupon collector problem involve harmonic numbers?",
-    "relevant_sources": ["06_coupon_collector_problem.md"]
+        "question": "Why does the coupon collector problem involve harmonic numbers?",
+        "relevant_sources": ["06_coupon_collector_problem.md"]
     },
     {
-    "question": "What is the idea behind rejecting the first group of applicants in the secretary problem?",
-    "relevant_sources": ["07_secretary_problem.md"]
+        "question": "What is the idea behind rejecting the first group of applicants in the secretary problem?",
+        "relevant_sources": ["07_secretary_problem.md"]
     },
     {
-    "question": "How does the lighthouse problem transform a random angle into a position on the shore?",
-    "relevant_sources": ["08_the_lighthouse_problem.md"]
+        "question": "How does the lighthouse problem transform a random angle into a position on the shore?",
+        "relevant_sources": ["08_the_lighthouse_problem.md"]
     },
     {
-    "question": "Why does Buffon's needle let us estimate pi using random throws?",
-    "relevant_sources": ["04_buffons_needle.md"]
+        "question": "Why does Buffon's needle let us estimate pi using random throws?",
+        "relevant_sources": ["04_buffons_needle.md"]
     },
     {
-    "question": "Why do different interval sizes change the Poisson maximum likelihood estimate?",
-    "relevant_sources": ["03_poisson_distribution_MLE_different_sized_intervals.md"]
+        "question": "Why do different interval sizes change the Poisson maximum likelihood estimate?",
+        "relevant_sources": ["03_poisson_distribution_MLE_different_sized_intervals.md"]
+    },
+    {
+        "question": "Which estimator is based on the largest observed serial number, and why is it biased if used directly?",
+        "relevant_sources": ["05_german_tank_problem.md"]
+    },
+    {
+        "question": "How can the gap between observed serial numbers be used to estimate the total population size?",
+        "relevant_sources": ["05_german_tank_problem.md"]
+    },
+    {
+        "question": "Why does adding the average missing gap to the maximum observed value reduce bias?",
+        "relevant_sources": ["05_german_tank_problem.md"]
+    },
+    {
+        "question": "What is the intuition behind giving smaller variance measurements more influence in an average?",
+        "relevant_sources": ["02_weighted_mean_derivation.md"]
+    },
+    {
+        "question": "Why do inverse variances appear as weights when combining multiple noisy measurements?",
+        "relevant_sources": ["02_weighted_mean_derivation.md"]
+    },
+    {
+        "question": "What happens to the combined estimate when one observation has much lower uncertainty than the others?",
+        "relevant_sources": ["02_weighted_mean_derivation.md"]
+    },
+    {
+        "question": "Which problem estimates pi using random geometric intersections?",
+        "relevant_sources": ["04_buffons_needle.md"]
+    },
+    {
+        "question": "How can repeated random needle drops be turned into an estimate of a mathematical constant?",
+        "relevant_sources": ["04_buffons_needle.md"]
+    },
+    {
+        "question": "Why does the probability of crossing a line depend on both the needle angle and its distance from the nearest line?",
+        "relevant_sources": ["04_buffons_needle.md"]
+    },
+    {
+        "question": "Which derivation uses a change of variables to convert position uncertainty into a probability density?",
+        "relevant_sources": ["08_the_lighthouse_problem.md"]
+    },
+    {
+        "question": "Why does the lighthouse problem produce a heavy-tailed distribution rather than a normal-looking one?",
+        "relevant_sources": ["08_the_lighthouse_problem.md"]
+    },
+    {
+        "question": "How does Bayes' rule allow the unknown source position to be estimated from observed flashes?",
+        "relevant_sources": ["08_the_lighthouse_problem.md"]
+    },
+    {
+        "question": "What is the expected waiting time until all possible outcomes have been seen at least once?",
+        "relevant_sources": ["06_coupon_collector_problem.md"]
+    },
+    {
+        "question": "Why does collecting the final unseen item take much longer on average than collecting the first few?",
+        "relevant_sources": ["06_coupon_collector_problem.md"]
+    },
+    {
+        "question": "How can the total waiting time be decomposed into a sum of geometric waiting times?",
+        "relevant_sources": ["06_coupon_collector_problem.md"]
+    },
+    {
+        "question": "Which strategy involves rejecting an initial sample and then accepting the first later option that beats everything seen so far?",
+        "relevant_sources": ["07_secretary_problem.md"]
+    },
+    {
+        "question": "Why does the optimal stopping threshold end up being close to a fixed fraction of the total number of candidates?",
+        "relevant_sources": ["07_secretary_problem.md"]
+    },
+    {
+        "question": "What is the trade-off between learning from early candidates and leaving enough later candidates to choose from?",
+        "relevant_sources": ["07_secretary_problem.md"]
+    },
+    {
+        "question": "How does the likelihood change when Poisson observations come from intervals of different sizes?",
+        "relevant_sources": ["03_poisson_distribution_MLE_different_sized_intervals.md"]
+    },
+    {
+        "question": "Why is the rate estimate adjusted by the total exposure time rather than just the number of observations?",
+        "relevant_sources": ["03_poisson_distribution_MLE_different_sized_intervals.md"]
+    },
+    {
+        "question": "Why is the sample mean the maximum likelihood estimate for the mean of a normal distribution?",
+        "relevant_sources": ["01_mean_and_variance_derivation.md"]
+    },
+    {
+        "question": "What role does minimizing squared error play in estimating the mean of a Gaussian?",
+        "relevant_sources": ["01_mean_and_variance_derivation.md"]
+    },
+    {
+        "question": "Why does the maximum likelihood variance estimate divide by n rather than n minus one?",
+        "relevant_sources": ["01_mean_and_variance_derivation.md"]
     }
 ]
