@@ -4,9 +4,6 @@ FROM python:3.12-slim
 # Create working directory in the container
 WORKDIR /app
 
-# This lets the container know where the index is.
-ENV INDEX_PATH=/app/storage/index
-
 # Copy the requirements file into the containers working
 # directory
 COPY requirements.txt .
@@ -29,3 +26,5 @@ EXPOSE 8000
 # Shows the docker container where api.py is.
 # This lets the container know where the index is.
 CMD ["uvicorn", "api:app", "--app-dir", "/app/src", "--host", "0.0.0.0", "--port", "8000"]
+# Runs uvicorn api:app --app-dir /app/src --host 0.0.0.0 --port 8000 on start up
+# --app-dir /app/src tells uvicorn to look inside this directory when trying to import api
