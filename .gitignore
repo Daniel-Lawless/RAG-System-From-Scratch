@@ -3,3 +3,4 @@ __pycache__/
 storage/index/
 .env
 .pytest_cache/
+.dockerignore
