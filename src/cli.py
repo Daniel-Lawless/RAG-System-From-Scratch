@@ -1,8 +1,12 @@
 import argparse
 import logging
-from pathlib import Path
 import shutil
+import boto3
+import os
 
+from dotenv import load_dotenv
+from botocore.exceptions import ClientError
+from pathlib import Path
 from vector_search import VectorSearch
 from chunking import Chunking
 from embeddings import Embeddings
@@ -10,9 +14,9 @@ from rag_pipeline import RAGPipeline
 from keyword_search import KeywordSearch
 from index_manager import IndexManager
 from hybrid_search import HybridSearch
+from logging_config import configure_logging
 
-logging.basicConfig(level=logging.INFO)
-
+load_dotenv()
 logger = logging.getLogger(__name__)
 
 class RAGCLI:
@@ -62,47 +66,250 @@ class RAGCLI:
 
         return True
     
+    # An s3_key is the path to a file in an s3 bucket.
+    # So for s3://bucket_name/storage/index/record.json,
+    # the key is storage/index/record.json
+    def _s3_key(self, prefix: str, filename: str) -> str:
+        # Removes the first and last slash to prevent double slashes
+        prefix = prefix.strip("/")
+
+        if prefix:
+            return f"{prefix}/{filename}"
+        
+        return filename
+    
+    def _s3_index_exists(self, s3_bucket:str, s3_prefix:str) -> bool:
+        # Set up a connection to S3
+        s3_client = boto3.client("s3")
+
+        # We want to check if these files exist on s3
+        required_files = ("embeddings.npy", "records.jsonl")
+
+        for filename in required_files:
+            # get the key
+            key = self._s3_key(s3_prefix, filename)
+
+            try:
+                # This checks info, if info exists, the file exists.
+                s3_client.head_object(Bucket=s3_bucket, Key=key)
+
+            except ClientError:
+                # If s3 object had no information,
+                # the index does not exist correctly
+                return False
+        
+        # If all files were there, return true
+        return True
+    
+    def _upload_index_to_s3(self, bucket:str, prefix:str) -> None:
+        s3_client = boto3.client("s3")
+
+        required_files = ("embeddings.npy", "records.jsonl")
+
+        for filename in required_files:
+            # Where the file is on our machine
+            local_path = self.index_path / filename
+            # Where is needs to go inside the bucket
+            key = self._s3_key(prefix, filename)
+
+            if not local_path.is_file():
+                raise FileNotFoundError(f"File {filename} does not exist at {local_path}")
+            
+            # This uploads a file from our machine to s3
+            s3_client.upload_file(
+                str(local_path),
+                bucket,
+                key
+            )
+
+            logger.info("Uploaded %s to s3://%s/%s", local_path, bucket, key)
+
+    def _remove_s3_index(self, s3_bucket:str, s3_prefix:str) -> None:
+        s3_client = boto3.client("s3")
+
+        required_files = ("embeddings.npy", "records.jsonl")
+
+        for filename in required_files:
+            key = self._s3_key(s3_prefix, filename)
+
+            try:
+                s3_client.delete_object(
+                    Bucket=s3_bucket,
+                    Key=key
+                )
+                logger.info("Deleted s3://%s/%s", s3_bucket, key)
+
+            except ClientError as error:
+                raise RuntimeError(
+                    f"Tried deleting index from s3://{s3_bucket}/{key}, but no such index exists"
+                    ) from error
+
     # Command to build index
-    def index(self, force: bool = False) -> None: 
-        # If a user attempts to to build an index when one already exists,
-        # tell them how to force rebuild.
-        if self._index_exists():
-            if not force:
+    def index(
+        self,
+        force: bool = False,
+        backend: str = "local",
+        s3_bucket: str | None = None,
+        s3_prefix: str = "rag-index",
+    ) -> None:
+        
+        if backend == "local":
+            # If a user attempts to to build an index when one already exists,
+            # tell them how to force rebuild.
+            if self._index_exists():
+                if not force:
+                    logger.warning(
+                        "Index already exists at %s. Use --force to rebuild.",
+                        self.index_path
+                    )
+                    return
+                
+                # If we reach here, an index exists and force is True,
+                # so delete the current saved index.
+                shutil.rmtree(self.index_path)
+                logger.info("Previous index removed.")
+            
+            # Build the new index
+            logger.info("Creating new index...")
+            index_manager = self._create_index_manager()
+
+            index_manager.build_index_from_data(
+                data_path=self.data_path, 
+                index_path=self.index_path
+            )
+
+            logger.info("New index created.")
+            
+            return
+        
+        elif backend == "s3":
+            # Define bucket and prefix. It will get the cli value first, if it is empty and
+            # a .env value is provided, it will then take that, else it returns None
+            s3_bucket = s3_bucket or os.getenv("S3_BUCKET")
+            s3_prefix = s3_prefix or os.getenv("S3_PREFIX", "rag-index")
+
+            if not s3_bucket:
+                raise ValueError(
+                    f"S3 bucket must be provided either from --s3_bucket or S3_BUCKET in .env"
+                )
+            
+            # Removes trailing spaces in the bucket name
+            s3_bucket = s3_bucket.strip()
+            # Removes the first and last slash to prevent double slashes
+            s3_prefix = s3_prefix.strip("/")
+
+            # If the index already exists
+            if self._s3_index_exists(
+                s3_bucket=s3_bucket,
+                s3_prefix=s3_prefix
+            ):
+                # And force is false
+                if force == False:
+                    logger.warning("" \
+                        "Index already exists at s3://%s/%s",
+                        s3_bucket,
+                        s3_prefix,
+                    )
+
+                    return
+
+                logger.info(
+                    "Rebuilding index at s3://%s/%s because force = %d",
+                    s3_bucket,
+                    s3_prefix,
+                    force
+                )
+            
+            # Remove the local version so we know it is fresh
+            if self._index_exists():
+                shutil.rmtree(self.index_path)
+                logger.info("previous local index at %s was removed", self.index_path)
+
+
+            logger.info("Creating new index locally before uploading to S3...")
+
+            # Create index manager object
+            index_manager = self._create_index_manager()
+
+            # Build index from new and save it to self.index_path
+            index_manager.build_index_from_data(
+                data_path=self.data_path,
+                index_path=self.index_path
+            )
+
+            # Upload newly created index to s3.
+            logger.info("Uploading index to S3...")
+            self._upload_index_to_s3(
+                bucket=s3_bucket,
+                prefix=s3_prefix
+            )
+
+            logger.info("New S3 index created at s3://%s/%s", s3_bucket, s3_prefix)
+            return
+
+        raise ValueError(
+            f"unsupported backend value: {backend} \available options: 'local', 's3'"
+            )
+
+    # Command to clear index.
+    def clear(
+        self,
+        backend:str,
+        s3_bucket:str | None = None,
+        s3_prefix:str | None = None
+        ) -> None:
+
+        # If the index is stored locally
+        if backend == "local":
+            # If a index does not exist, we cannot delete it.
+            if not self.index_path.exists():
                 logger.warning(
-                    "Index already exists at %s. Use --force to rebuild.",
+                    "No index exists at %s",
                     self.index_path
                 )
                 return
-            
-            # If we reach here, an index exists and force is True,
-            # so delete the current saved index.
+
+            # If the index exists, remove it.
             shutil.rmtree(self.index_path)
-            logger.info("Previous index removed.")
+            logger.info("Removed index at %s", self.index_path)
         
-        # Build the new index
-        logger.info("Creating new index...")
-        index_manager = self._create_index_manager()
+        # If the backend is stored on AWS s3
+        elif backend == "s3":
+            # Get bucket and prefix
+            s3_bucket = os.getenv("S3_BUCKET")
+            s3_prefix = os.getenv("S3_PREFIX", "rag-index")
 
-        index_manager.build_index_from_data(
-            data_path=self.data_path, 
-            index_path=self.index_path
-        )
+            if not s3_bucket:
+                raise ValueError(
+                    "S3 bucket must be provided with --s3-bucket or S3_BUCKET in .env"
+                    )
+            
+            s3_bucket = s3_bucket.strip()
+            s3_prefix = s3_prefix.strip("/")
 
-        logger.info("New index created.")
-                    
-    # Command to clear index.
-    def clear(self):
-        # If a index does not exist, we cannot delete it.
-        if not self.index_path.exists():
-            logger.warning(
-                "No index exists at %s",
-                self.index_path
+            if not self._s3_index_exists(
+                s3_bucket=s3_bucket,
+                s3_prefix=s3_prefix
+            ):
+                logger.warning(
+                    "No index at s3://%s/%s exists",
+                    s3_bucket,
+                    s3_prefix
+                )
+
+            # Remove the index on s3
+            self._remove_s3_index(
+                s3_bucket=s3_bucket,
+                s3_prefix=s3_prefix
             )
+
+            logger.info("Removed S3 index at s3://%s/%s", s3_bucket, s3_prefix)
             return
 
-        # If the index exists, remove it.
-        shutil.rmtree(self.index_path)
-        logger.info("Removed index at %s", self.index_path)
+        raise ValueError(
+            f"unsupported backend value: {backend} \available options: 'local', 's3'"
+            )
+
 
     # Command to ask a query
     def ask(
@@ -250,6 +457,51 @@ def build_parser() -> argparse.ArgumentParser:
         help="True to force rebuilding the vector database, False otherwise"
     )
 
+    # If --backend is s3, create and push the index to s3, if it is local, build it on our machine
+    index_parser.add_argument(
+        "--backend",
+        type=str,
+        choices=["local", "s3"],
+        default="local",
+        help="Choose where to build the index."
+    )
+
+    index_parser.add_argument(
+        "--s3-bucket",
+        type=str,
+        default=None,
+        help="S3 bucket to upload the index to when using --backend s3.",
+    )
+
+    index_parser.add_argument(
+        "--s3-prefix",
+        type=str,
+        default="rag-index",
+        help="S3 prefix/folder to upload the index to when using --backend s3.",
+    )
+
+    clear_parser.add_argument(
+        "--backend",
+        type=str,
+        choices=["local", "s3"],
+        default="local",
+        help="Choose which index to remove"
+    )
+    
+    clear_parser.add_argument(
+        "--s3-bucket",
+        type=str,
+        default=None,
+        help="S3 bucket to delete the index from when using --backend s3.",
+    )
+
+    clear_parser.add_argument(
+        "--s3-prefix",
+        type=str,
+        default=None,
+        help="S3 prefix/folder to delete the index from when using --backend s3.",
+    )
+
     logger.info("Parser built.")
 
     return parser
@@ -265,20 +517,31 @@ def main() -> None:
     
     # If the command was index, pass the force argument into index.
     if args.command == "index":
-        cli.index(force=args.force)
+        cli.index(
+            force=args.force,
+            backend=args.backend,
+            s3_bucket=args.s3_bucket,
+            s3_prefix=args.s3_prefix
+            )
     
     # If the command was clear, run clear().
     elif args.command == "clear":
-        cli.clear()
+        cli.clear(
+            backend = args.backend,
+            s3_bucket= args.s3_bucket,
+            s3_prefix=args.s3_prefix
+            )
     
     # If the command was ask, pass the arguments into ask.
     elif args.command == "ask":
-        cli.ask(query=args.query,
-                num_retrieved_chunks=args.k,
-                retrieval_method=args.retriever,
-                vector_weight=args.vector_weight,
-                keyword_weight=args.keyword_weight
-                )
+        cli.ask(
+            query=args.query,
+            num_retrieved_chunks=args.k,
+            retrieval_method=args.retriever,
+            vector_weight=args.vector_weight,
+            keyword_weight=args.keyword_weight
+        )
     
 if __name__ == "__main__":
+    configure_logging()
     main()
