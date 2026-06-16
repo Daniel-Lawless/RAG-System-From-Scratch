@@ -14,6 +14,7 @@ def configure_logging() -> None:
         "vector_search",
         "keyword_search",
         "hybrid_search",
+        "botocore.credentials"
     ]
 
     for logger_name in noisy_loggers:
