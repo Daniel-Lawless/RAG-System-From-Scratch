@@ -69,7 +69,8 @@ class VectorSearch:
 
         return vector_search
 
-    # Adds a record to the vector database
+    # Used as a helper method for testing. This does not populate vector search,
+    # it is populated through an existing index.
     def add_record(self, chunk: str, embedding: np.ndarray, source_file: str, chunk_index: int) -> None:
 
         # Construct record

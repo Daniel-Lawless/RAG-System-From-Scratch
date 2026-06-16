@@ -9,12 +9,14 @@ from embeddings import Embeddings
 from vector_search import VectorSearch
 from keyword_search import KeywordSearch
 from hybrid_search import HybridSearch
-from rag_pipeline import RAGPipeline
+from rag_pipeline import RAGPipeline 
+from index_loader import prepare_index
 
 # Create the API application
 app = FastAPI(title="Mini RAG system API")
 
-INDEX_PATH = Path(os.getenv("INDEX_PATH", "storage/index"))
+# Get where the index was saved to.
+INDEX_PATH = prepare_index()
 
 # initialising these objects only happens at startup time.
 # They do not get reloaded with each request.

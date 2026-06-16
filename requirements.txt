@@ -6,3 +6,5 @@ pydantic
 sentence-transformers
 python-dotenv
 pytest
+boto3
+dotenv
