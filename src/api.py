@@ -50,7 +50,7 @@ class QueryResponse(BaseModel):
     retrieved_sources: list[RetrievedSource]
 
 # Is the API alive endpoint.
-@app.get("/")
+@app.get("/health")
 def health_check() -> dict[str, str]:
     return {"status" : "ok"}
 
