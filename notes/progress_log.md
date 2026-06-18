@@ -1,6 +1,6 @@
 # Progress Log
 
-## Day 1 — Basic RAG pipeline
+## Milestone 1 — Basic RAG pipeline
 
 Implemented:
 - Word-based chunking with overlap
@@ -13,7 +13,7 @@ Key lesson:
 - Retrieval quality controls answer quality. Increasing k from 2 to 4 allowed the model to retrieve the chunk containing the final weighted mean estimator.
 - Normalizing vectors before calculating the cosine similarity reduces the computation down to only the dot product.
 
-## Day 2 — Metadata-aware chunk records and retrieval debugging
+## Milestone 2 — Metadata-aware chunk records and retrieval debugging
 
 Implemented:
 
@@ -62,7 +62,7 @@ Key lesson:
 - For the query asking about Buffon's Needle, the highest-ranked retrieved chunks came from `04-buffons-needle.md`, which is the expected behaviour.
 - Some lower-ranked chunks may come from unrelated files when `k` is larger, so choosing an appropriate number of retrieved chunks matters.
 
-## Day 3 — Recursive chunking and structure-aware splitting
+## Milestone 3 — Recursive chunking and structure-aware splitting
 
 Implemented:
 
@@ -82,7 +82,7 @@ Key lesson:
 - Recursive chunking keeps related content together where possible by preferring paragraph and sentence boundaries before falling back to word-based splitting.
 - Overlap helps preserve context between neighbouring chunks, especially when an explanation continues across a chunk boundary.
 
-## Day 4 — Vectorized search with NumPy matrix multiplication
+## Milestone 4 — Vectorized search with NumPy matrix multiplication
 
 Implemented:
 
