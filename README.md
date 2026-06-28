@@ -167,10 +167,10 @@ To compare retrieval quality, I built an evaluation pipeline using a labelled se
 <div align="center">
   
 | Retriever | Hit@4 | Avg Correct Sources@4 | Precision@4 | MRR@4 |
-|---|---:|---:|---:|---:|
-| Vector | 1.0000 | 2.8810 | 0.7202 | 0.9563 |
-| Keyword | 0.9762 | 2.6905 | 0.6726 | 0.9325 |
-| Hybrid | 1.0000 | 2.9286 | 0.7321 | 0.9425 |
+|:---------:|:-----:|:---------------------:|:-----------:|:-----:|
+| Vector    | 1.0000 | 2.8810 | 0.7202 | 0.9563 |
+| Keyword   | 0.9762 | 2.6905 | 0.6726 | 0.9325 |
+| Hybrid    | 1.0000 | 2.9286 | 0.7321 | 0.9425 |
 
 </div>
 
