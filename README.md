@@ -160,6 +160,26 @@ LLM response generation
 
 ---
 
+## Evaluation
+
+To compare retrieval quality, I built an evaluation pipeline using a labelled set of questions and expected source documents (can be found in `eval/question.json`). Each retriever was evaluated on whether it returned relevant chunks in the top k results (4 in this example), allowing vector, keyword, and hybrid retrieval strategies to be compared directly.
+
+<div align="center">
+  
+| Retriever | Hit@4 | Avg Correct Sources@4 | Precision@4 | MRR@4 |
+|---|---:|---:|---:|---:|
+| Vector | 1.0000 | 2.8810 | 0.7202 | 0.9563 |
+| Keyword | 0.9762 | 2.6905 | 0.6726 | 0.9325 |
+| Hybrid | 1.0000 | 2.9286 | 0.7321 | 0.9425 |
+
+</div>
+
+The hybrid retriever achieved the strongest overall source quality, with the highest Precision@4 and average number of correct sources returned. Vector search achieved the highest MRR@4, meaning it most consistently ranked a relevant source near the top of the results.
+
+This evaluation helped validate that combining semantic search with keyword-based BM25 retrieval improved retrieval reliability, especially when questions depended on both conceptual similarity and exact technical terminology.
+
+---
+
 ## Architecture
 
 <div align="center">
